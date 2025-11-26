@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 import { signIn, register, signInWithGoogle } from '@/lib/auth';
 import { FiMail, FiLock, FiUser, FiAlertCircle } from 'react-icons/fi';
 
-export default function LoginPage() {
+function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const mode = searchParams.get('mode') || 'login';
@@ -291,6 +291,26 @@ export default function LoginPage() {
 
       <Footer />
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gray-50">
+        <Navbar />
+        <div className="max-w-md mx-auto px-4 py-16">
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="flex justify-center items-center py-20">
+              <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+            </div>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    }>
+      <LoginForm />
+    </Suspense>
   );
 }
 
