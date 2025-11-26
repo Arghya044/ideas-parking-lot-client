@@ -88,7 +88,7 @@ export const ideasAPI = {
 export const categoriesAPI = {
   getAll: async () => {
     try {
-      // Create a request without auth token for public endpoints
+      
       const response = await axios.get(`${API_BASE_URL}/api/categories`, {
         headers: {
           'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ export const categoriesAPI = {
       return response.data;
     } catch (error) {
       console.error('Error fetching categories:', error);
-      // Return empty array on error so UI doesn't break
+      
       return { 
         success: false, 
         categories: [],
