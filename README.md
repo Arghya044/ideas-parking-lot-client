@@ -2,6 +2,11 @@
 
 A modern, full-featured Ideas Parking Lot application built with Next.js (App Router) where users can save and manage their creative ideas.
 
+## Live Link: 
+https://ideas-parking-lot-client.vercel.app
+## Backend github link:
+https://github.com/Arghya044/ideas-parking-lot-server.git
+
 ## Features
 
 - 🎨 **Modern UI** - Beautiful, responsive design with a bluish theme
@@ -18,49 +23,6 @@ A modern, full-featured Ideas Parking Lot application built with Next.js (App Ro
 - **Axios** - HTTP client for API requests
 - **React Icons** - Icon library
 - **Express.js** - Backend API server (separate)
-
-## Project Structure
-
-```
-ideas-parking-lot/
-├── src/
-│   ├── app/
-│   │   ├── layout.js              # Root layout
-│   │   ├── page.js                # Landing page
-│   │   ├── login/
-│   │   │   └── page.js            # Login/Register page
-│   │   ├── ideas/
-│   │   │   ├── page.js            # Ideas list page
-│   │   │   └── [id]/
-│   │   │       └── page.js        # Idea details page
-│   │   ├── add-idea/
-│   │   │   └── page.js            # Add idea (protected)
-│   │   ├── manage-ideas/
-│   │   │   └── page.js            # Manage ideas (protected)
-│   │   ├── about/
-│   │   │   └── page.js            # About page
-│   │   ├── contact/
-│   │   │   └── page.js            # Contact page
-│   │   └── api/
-│   │       └── auth/
-│   │           └── callback/
-│   │               └── google/
-│   │                   └── route.js  # Google OAuth callback
-│   ├── components/
-│   │   ├── Navbar.js              # Navigation bar
-│   │   ├── Footer.js              # Footer component
-│   │   ├── IdeaCard.js            # Idea card component
-│   │   └── ProtectedRoute.js      # Auth wrapper
-│   └── lib/
-│       ├── api.js                 # API helper functions
-│       └── auth.js                # Auth helper functions
-├── public/
-│   └── assects/
-│       └── ideaslogo.png          # Logo
-├── index.js                       # Express backend server
-├── package.json
-└── README.md
-```
 
 ## Getting Started
 
